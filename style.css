@@ -12,6 +12,7 @@ body {
   font-family: 'Roboto' sans-serif;
   background: #f4f4f4;
   line-height: 1.4;
+  color: rgba(229, 240, 238, 0.904);
 }
 
 ul li {
@@ -20,4 +21,31 @@ ul li {
 
 a {
   text-decoration: none;
+  color: rgba(229, 240, 238, 0.904);
+}
+
+/**
+ * nav bar
+ */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background: #5d4954;
+}
+
+/* the first element */
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.3rem;
+}
+
+/* links in navbar the second element */
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
 }

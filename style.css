@@ -51,13 +51,81 @@ nav {
 }
 
 /* burger menu */
-/* .burger {
+.burger {
   display: none;
-} */
+}
 
 .burger div {
   width: 25px;
   height: 3px;
   background-color: rgba(229, 240, 238, 0.904);
   margin: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #7c6773;
+  padding: 0.3rem;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+/**
+ * mobile size
+ */
+
+@media screen and (max-width: 780px) {
+  body {
+    overflow: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 80vh;
+    top: 8vh;
+    background: #5d4954;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* animate the burger icon to x  the class .togle add throw the javascript  */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+  /* remove the midle line */
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
